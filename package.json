@@ -1,0 +1,6 @@
+{
+  "family": "seajs",
+  "name": "plugin-handlebars",
+  "version": "0.1.0",
+  "description": "A seajs plugin for handlebars template engine."
+}
