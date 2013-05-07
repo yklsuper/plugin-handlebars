@@ -11,13 +11,17 @@
       }
     })
   </script>
-  <script type="text/javascript" src="../src/plugin-handlebars.js"></script>
 </head>
 <body>
   <div id="mocha"></div>
   <script type="text/javascript">
     seajs.use('gallery/mocha/1.9.0/mocha.css')
-    seajs.use('gallery/mocha/1.9.0/mocha', function() {
+    if (location.search.indexOf('cov') === -1) {
+      var url = '../src/plugin-handlebars'
+    } else {
+      var url = '../src-cov/plugin-handlebars'
+    }
+    seajs.use([url, 'gallery/mocha/1.9.0/mocha'], function() {
       mocha.setup('bdd')
       seajs.use('./spec', function() {
         if (window.mochaPhantomJS) {
