@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Runner</title>
+  <script type="text/javascript" src="http://assets.spmjs.org/seajs/seajs/2.0.0/sea.js"></script>
+  <script type="text/javascript">
+    seajs.config({
+      alias: {
+        'gallery/handlebars': 'gallery/handlebars/1.0.1/handlebars'
+      }
+    })
+  </script>
+  <script type="text/javascript" src="../src/plugin-handlebars.js"></script>
+</head>
+<body>
+  <div id="mocha"></div>
+  <script type="text/javascript">
+    seajs.use('gallery/mocha/1.9.0/mocha.css')
+    seajs.use('gallery/mocha/1.9.0/mocha', function() {
+      mocha.setup('bdd')
+      seajs.use('./spec', function() {
+        if (window.mochaPhantomJS) {
+          mochaPhantomJS.run()
+        } else {
+          mocha.run()
+        }
+      })
+    })
+  </script>
+</body>
+</html>

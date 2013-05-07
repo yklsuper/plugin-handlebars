@@ -2,5 +2,14 @@
   "family": "seajs",
   "name": "plugin-handlebars",
   "version": "0.1.0",
-  "description": "A seajs plugin for handlebars template engine."
+  "description": "A seajs plugin for handlebars template engine.",
+  "keywords": ["template", "handlebars"],
+  "author": "Hsiaoming Yang <me@lepture.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seajs/plugin-handlebars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seajs/plugin-handlebars/issues"
+  }
 }
