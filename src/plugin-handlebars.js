@@ -128,16 +128,4 @@
         .replace(/[\u2029]/g, "\\u2029")
   }
 
-  // For node environment
-  if (typeof module !== "undefined") {
-    xhr = function(filename, callback) {
-      callback(require("fs").readFileSync(pure(filename), "utf8"))
-    }
-  }
-
-  function pure(uri) {
-    // Remove timestamp etc
-    return uri.replace(/\?.*$/, "")
-  }
-
 })(seajs, this);
