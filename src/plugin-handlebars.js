@@ -20,7 +20,7 @@
       var code = [
         'define("' + uri + '#", ["gallery/handlebars/1.0.2/handlebars"], function(require, exports, module) {',
         '  var source = "' + jsEscape(content) + '"',
-        '  var Handlebars = require("gallery/handlebars")',
+        '  var Handlebars = require("gallery/handlebars/1.0.2/handlebars")',
         '  module.exports = function(data, options) {',
         '    var helpers = (options || {}).helpers || {}',
         '    for (var key in helpers) {',
