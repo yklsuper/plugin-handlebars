@@ -18,7 +18,7 @@
 
     exec: function(uri, content) {
       var code = [
-        'define("' + uri + '#", ["gallery/handlebars"], function(require, exports, module) {',
+        'define("' + uri + '#", ["gallery/handlebars/1.0.2/handlebars"], function(require, exports, module) {',
         '  var source = "' + jsEscape(content) + '"',
         '  var Handlebars = require("gallery/handlebars")',
         '  module.exports = function(data, options) {',
